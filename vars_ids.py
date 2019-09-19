@@ -8,7 +8,8 @@
 # Requirements:
 #
 # Version: 0.1.0
-# Author: Kevin Bowen <kevin.bowen@gmail.com>
+# Author:         Stuart Williams
+#     forked by:  Kevin Bowen <kevin.bowen@gmail.com>
 #
 # Original source:
 # Updated: 20190918
@@ -16,9 +17,11 @@
 # }}} ------------------------------------------------------------------- #
 
 
-import pprint
+from pprint import pprint
 __all__ = ['_vars_ids']
 _CLUTTER = globals().copy()
+
+
 def _vars_ids():
     """
     Show names, values, and ids, ignoring any existing names.
@@ -29,4 +32,4 @@ def _vars_ids():
     titles = ['name    value  id'.split(),
               '----    -----  --'.split()]
     for name, value, id_ in titles + rows:
-        print('{:8.8}  {:8.8}  {}'.format(name, value, id_))
+        pprint('{:8.8}  {:8.8}  {}'.format(name, value, id_))
